@@ -140,4 +140,4 @@ while 1:
             string.append(str(l_board[rank][10]))
             wr.writerow(string)
         file.close()
-    #break
+    break
