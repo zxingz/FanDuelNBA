@@ -13,7 +13,7 @@ def lineup_analysis(lineup):
     for i in range(8):
         lineup[i] -= lineup[i+1]
     flag = 0
-    if len([i for i in lineup if i <4000]) < 2:
+    if len([i for i in lineup if i <4000]) < 3:
         flag += 1
     if 2<= len([i for i in lineup if 4000 <= i < 6000]) <= 5:
         flag += 1
