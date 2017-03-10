@@ -10,6 +10,7 @@ file = 'FD.csv'
 
 
 def lineup_analysis(lineup):
+    return True
     for i in range(8):
         lineup[i] -= lineup[i+1]
     flag = 0
