@@ -1,4 +1,4 @@
-import demjson
+import json
 import urllib.request
 import pickle
 import csv
@@ -58,10 +58,8 @@ if __name__ == '__main__':
     mode = 'pro'
     #dates = input('Enter Date in DDMMYY format : ')
     dates = '070217'
-    text = str(urllib.request.urlopen('https://rotogrinders.com/lineups/nba-v1?date=20' + dates[4:] + '-' + dates[2:4] + '-' + dates[0:2] + '&site=fanduel').read())
-    text = '{' + text[text.index('isGameToggle: true'):text.index('teamsOff')] + 'teamsOff: []}'
-    text = text.replace('\\n', '')
-    data = demjson.decode(text)
-    pickle.dump(data, open('C:\\Users\\v2srivas\\Desktop\\rotodata.pkl', 'wb'))
-    data = pickle.load(open('C:\\Users\\v2srivas\\Desktop\\rotodata.pkl', 'rb'))
-    process(mode, data, dates)
+    text = str(urllib.request.urlopen('https://rotogrinders.com/lineups/nba?date=20' + dates[4:] + '-' + dates[2:4] + '-' + dates[0:2] + '&site=fanduel').read())
+    text = text[text.find('schedules: ')+11:text.find('startedGames: ')]
+    text = text[:text.find('\\n')-1]
+    data = json.loads(text)
+    True
