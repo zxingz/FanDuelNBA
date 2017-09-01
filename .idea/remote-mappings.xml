@@ -10,6 +10,13 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="python@ssh://vishnu@192.168.0.12:22/home/vishnu/python/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/vishnu/Elements/PycharmProjects/FanduelNBA" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>

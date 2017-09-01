@@ -120,6 +120,7 @@ def get_espn_boxscore():
                 continue
 
 if __name__ == '__main__':
+    pass
     #get_espn_game_ids('20150101')
     #get_rotogrinder_game_details()
-    get_espn_boxscore()
+    #get_espn_boxscore()
